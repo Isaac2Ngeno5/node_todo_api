@@ -1,5 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const routes = require('./app/routes');
 require('dotenv').config();
 const app = express();
 
@@ -12,7 +13,9 @@ app.get('/', (req, res)=>{
     status: true,
     message: "hello, Welcome to Node"
   })
-})
+});
+
+app.use('/todos', routes);
 
 const PORT = process.env.PORT;
 app.listen(PORT, ()=>{

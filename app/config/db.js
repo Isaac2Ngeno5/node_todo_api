@@ -8,4 +8,4 @@ const MyAppModel =mysqlModel.createConnection({
   database: process.env.DB,
 });
 
-conn.connect();
+// conn.connect();
