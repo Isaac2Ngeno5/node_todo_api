@@ -8,4 +8,4 @@ const TodoController = require('../controllers/TodoController');
 router.get("/", TodoController.findAll);
 
 
-export default router;
+module.exports = router;

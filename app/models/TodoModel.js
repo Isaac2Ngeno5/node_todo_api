@@ -1,9 +1,5 @@
-require('../config/db');
+const MyAppModel = require('../config/db');
 
-const todo = MyAppModel.extend({
-  tableName: "todos",
-});
+let todo = new MyAppModel({tableName: "todos"});
 
-todo = new Todo();
-
-export default todo;
+module.exports = todo;

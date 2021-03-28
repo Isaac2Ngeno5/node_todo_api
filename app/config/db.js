@@ -9,3 +9,4 @@ const MyAppModel =mysqlModel.createConnection({
 });
 
 // conn.connect();
+module.exports = MyAppModel;
