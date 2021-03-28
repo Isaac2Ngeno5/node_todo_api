@@ -1,12 +1,12 @@
-const mysql = require('mysql');
+var mysqlModel = require('mysql-model');
 require('dotenv').config();
 
-const conn =mysql.createConnection({
-
+const MyAppModel =mysqlModel.createConnection({
   host: process.env.HOST,
   user: process.env.USER,
   password: process.env.PASSWORD,
   database: process.env.DB,
 });
 
-conn.connect();
+// conn.connect();
+module.exports = MyAppModel;
